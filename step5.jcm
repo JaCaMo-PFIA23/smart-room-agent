@@ -1,0 +1,12 @@
+mas smart_room_agent {
+
+  agent room_agent : room_agent_5.asl {
+    beliefs: preferred_temp(10)
+    goals: keep_temperature
+    focus: room.hvac
+  }
+
+  workspace room {
+    artifact hvac: devices.HVAC(30) 
+  }
+}
